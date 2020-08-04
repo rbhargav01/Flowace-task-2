@@ -1,4 +1,4 @@
-# Flowace-task-2-Order Management System
+# Flowace-task-3-Order Management System
 Create Authentication ( Login / Signup / Reset password)
 Show list of Products (Show Only after Login)
 Add products to the cart.
