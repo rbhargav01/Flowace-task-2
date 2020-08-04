@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Site</title>
+    <link rel='stylesheet' href='./stylesheets/style_home.scss' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%- include('./head.ejs') %>
+</head>
+<body>
+<%- include('./header1.ejs') %>
+<!--
+<div class="title">
+    <h1 class="main">Fashionista</h1>
+    <div class="subdiv">
+        <p >Welcome <%= username %>!!!!!</p>
+        <div class="subtitle">
+            <form action="/read" method="post"><button type="submit">My Cart</button></form>
+            <a href="/">Logout</a>
+        </div>
+    </div>
+</div>
+-->
+<div class="container1">
+    <form action="/shopping-samsung" method="post">
+        <div class="subcontainer">
+            <div class="inner1">
+                <img src="./samsung.jpeg">
+            </div>
+
+            <div class="inner">
+                <h3>Samsung</h3>
+                <p>Samsung features a 6.3-inch Quad HD+ Super AMOLED 'Infinity' display and is powered by octa-core Qualcomm Snapdragon 835 processor. The phablet comes with 6GB RAM and 64GB of internal storage. It also has support for microSD card. Galaxy Note 8 runs Android 7.1</p>
+
+            </div>
+            <div class="inner1">
+                <h3 style="padding-bootom:2rem">Price: $800</h3>
+                <button name="ADDTOCART" id="samsung">+ ADD</button>
+            </div>
+        </div>
+    </form>
+    <form action="/shopping-oneplus" method="post">
+        <div class="subcontainer">
+            <div class="inner1">
+                <img src="/oneplus.jpeg">
+            </div>
+            <div class="inner">
+                <h3>OnePlus</h3>
+                <p>OnePlus launched on 31st October 2018, comes with a 6.41 inch display & a resolution of 1080 x 2340 pixels. The Smartphone is powered by 2.8 GHz Octa core Qualcomm SDM845 Snapdragon 845 (10 nm) processor and runs on 6 GB of RAM.</p>
+
+            </div>
+            <div class="inner1">
+                <h3 style="padding-bootom:2rem">Price: $600</h3>
+                <button name="ADDTOCART" id="oneplus">+ ADD</button>
+            </div>
+        </div>
+    </form>
+    <form action="/shopping-oppo" method="post">
+        <div class="subcontainer">
+            <div class="inner1">
+                <img src="/oppo.jpeg">
+            </div>
+            <div class="inner">
+                <h3>Oppo</h3>
+                <p>The Oppo is a flagship smartphone, powered by the Snapdragon 865 processor with 12GB RAM and 256GB onboard storage. The Oppo Find X2 supports 5G, making it future proof. The smartphone also packs a 4,200 mAh battery with 65W fast charging support, making it one of the best Oppo smartphones in the market.</p>
+
+            </div>
+            <div class="inner1">
+                <h3 style="padding-bootom:2rem">Price: $500</h3>
+                <button name="ADDTOCART" id="oppo">+ ADD</button>
+            </div>
+        </div>
+    </form>
+    <form action="/shopping-apple" method="post">
+        <div class="subcontainer">
+            <div class="inner1">
+                <img src="/apple.jpeg">
+            </div>
+            <div class="inner">
+                <h3>iPhone</h3>
+                <p>Weight: 194g | Dimensions: 150.9 x 75.7 x 8.3mm | OS: iOS 13 | Screen size: 6.1-inch | Resolution: 828 x 1792 | CPU: A13 Bionic | RAM: 4GB | Storage: 64/128/256GB | Battery: Unknown | Rear camera: 12MP+12MP | Front camera: 12MP</p>
+
+            </div>
+            <div class="inner1">
+                <h3 style="padding-bootom:2rem">Price: $1000</h3>
+                <button name="ADDTOCART"  id="apple">+ ADD</button>
+            </div>
+        </div>
+    </form>
+    <form action="/shopping-vivo" method="post">
+        <div class="subcontainer">
+            <div class="inner1">
+                <img src="/vivo.jpeg">
+            </div>
+            <div class="inner">
+                <h3>Vivo</h3>
+                <p>Vivo bestows a 6.56-inch FHD+ E3 AMOLED display with an aspect ratio of 19.8:9, an octa-core Snapdragon 765G SoC along with 8GB RAM and 128GB/256GB storage space. Running Android 10 topped with Funtouch OS 10.5, the Vivo X50 Pro with a quad-camera setup comprising a 48MP primary sensor, a 32MP selfie camera sensor, an in-display fingerprint sensor, and a 4315mAh battery.</p>
+
+            </div>
+            <div class="inner1">
+                <h3 style="padding-bootom:2rem">Price: $500</h3>
+                <button name="ADDTOCART" id="vivo">+ ADD</button>
+            </div>
+        </div>
+    </form>
+    <form action="/shopping-redmi" method="post">
+        <div class="subcontainer">
+            <div class="inner1">
+                <img src="/redmi.jpeg">
+            </div>
+            <div class="inner">
+                <h3>Redmi</h3>
+                <p>The Redmi is a joy to use as it has a 6.26-inch FHD+ display and a well-rounded ergonomic design. It features the Snapdragon 636 processor and 6GB RAM as well as 64 GB ROM for smooth and lag-free performance.</p>
+
+            </div>
+            <div class="inner1">
+                <h3 style="padding-bootom:2rem">Price: $400</h3>
+                <button name="ADDTOCART" id="redmi">+ ADD</button>
+            </div>
+        </div>
+    </form>
+</div>
+<footer>
+    <%- include('./footer.ejs') %>
+</footer>
+<style>
+    .container1{
+        padding-top: 5rem;
+        padding: 2rem;
+    }
+    .subcontainer{
+        width:100%;
+        display:flex;
+        border:2px solid;
+        padding-top: 5rem;
+        padding: 2rem;
+    }
+    .inner{
+        width:70%;
+        padding:5px;
+    }
+    .inner1{
+        width:15%;
+        padding:5px;
+    }
+</style>
+<style>
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: white;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    /* Add padding to containers */
+    .container {
+        border: solid;
+        border-width: 2px;
+        border-color: #a3a0a0;
+
+        padding: 16px;
+        margin: 16px 20rem;
+        background-color: white;
+    }
+
+    /* Full-width input fields */
+    input[type=text], input[type=password] {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+    }
+
+    input[type=text]:focus, input[type=password]:focus {
+        background-color: #ddd;
+        outline: none;
+    }
+
+    /* Overwrite default styles of hr */
+    hr {
+        border: 1px solid #f1f1f1;
+        margin-bottom: 25px;
+    }
+
+    /* Set a style for the submit button */
+    .registerbtn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 16px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+    }
+
+    .registerbtn:hover {
+        opacity: 1;
+    }
+
+    /* Add a blue text color to links */
+    a {
+        color: dodgerblue;
+        padding: 20px;
+    }
+
+    /* Set a grey background color and center the text of the "sign in" section */
+    .signin {
+        background-color: #f1f1f1;
+        text-align: center;
+    }
+</style>
+
+</body>
+</html>
